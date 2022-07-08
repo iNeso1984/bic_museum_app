@@ -8,6 +8,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export const Header = () => {
    const [sidebar, setSidebar] = useState(false);
+   window.addEventListener("scroll", function(){
+    const header = document.querySelector("header")
+    header.classList.toggle("active", window.screenY>200)
+   })
   return (
     <>
       <header className="header">
@@ -46,8 +50,12 @@ export const Header = () => {
               </li>
             </ul>
           </div>
-          <button className="navbar-items-icons" onClick={()=> setSidebar(!sidebar)}></button>
-             {sidebar ? <CloseIcon/> : <MenuIcon/>}
+          <button
+            className="navbar-items-icons"
+            onClick={() => setSidebar(!sidebar)}
+          >
+            {sidebar ? <CloseIcon /> : <MenuIcon />}
+          </button>
         </div>
       </header>
     </>

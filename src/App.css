@@ -1,39 +1,106 @@
- @import url("https://use.typekit.net/ypq3qal.css");
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap');
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+font-family: 'Rubik', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  max-width: 80%;
+  margin:auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex{
+  display:flex;
+  justify-content: space-between;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/*Header Start----------------->*/
+header{
+  padding:20px 0;
+  background-color: rgb(158, 133, 103);
+  height: 150px;
+}
+header ul{
+  display:inline-block;
+}
+header ul li{
+  display:inline-block;
+  margin-left: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header ul li a{
+  font-weight: 500;
+  transition: 0.5s;
+  color:black;
+}
+header ul li a:hover{
+  color:rgb(243, 99, 74);
+  font-weight:600;
+}
+.HeaderIcon{
+  margin-left: 20px;
+  transition: 0.5s;
+}
+.navbar-items-icons{
+  color:black;
+  display: none;
+ 
+}
+header.active{
+  position: sticky;
+  top: 0;
+  left:0;
+  background-color: #fff;
+  box-shadow: 0 2px 28px 0 rgba(0 0 0/6%);
+  width: 100%;
+  z-index:10;
+
+}
+@media screen and (max-width: 768px){
+ header .icon{
+  display:none;
+ }
+ .nav-links{
+  display:none;
+ }
+ .nav-links-sidebar{
+  position:absolute;
+  display:block;
+  background-color: #fff;
+  left:50px;
+  top:75px;
+  transition: 0.5s;
+  width: 100%;
+  height: 30vh;
+  z-index: 5;
+
+ }
+ .nav-links-sidebar{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 30px;
+ }
+ header ul li{
+  margin-bottom: 30px;
+
+ }
+ .navbar-items-icons{
+display: block;
+position: absolute;
+right:30px;
+color:black;
+border: 1px solid;
+ }
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*Header End------------------->*/
